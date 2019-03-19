@@ -6753,7 +6753,7 @@
     <associate|auto-134|<tuple|9.3|77>>
     <associate|auto-135|<tuple|9.3.1|77>>
     <associate|auto-136|<tuple|9.4|77>>
-    <associate|auto-137|<tuple|9.5|77>>
+    <associate|auto-137|<tuple|9.5|78>>
     <associate|auto-138|<tuple|9.6|78>>
     <associate|auto-139|<tuple|9.6.1|78>>
     <associate|auto-14|<tuple|2.3.1|15>>
@@ -6761,7 +6761,7 @@
     <associate|auto-141|<tuple|9.6.2.1|78>>
     <associate|auto-142|<tuple|9.6.2.2|78>>
     <associate|auto-143|<tuple|9.6.3|78>>
-    <associate|auto-144|<tuple|9.6.4|78>>
+    <associate|auto-144|<tuple|9.6.4|79>>
     <associate|auto-145|<tuple|9.6.5|79>>
     <associate|auto-146|<tuple|9.6.6|79>>
     <associate|auto-147|<tuple|9.6.7|79>>
@@ -6770,7 +6770,7 @@
     <associate|auto-15|<tuple|2.3.2|15>>
     <associate|auto-150|<tuple|9.7.2|80>>
     <associate|auto-151|<tuple|9.8|80>>
-    <associate|auto-152|<tuple|9.9|80>>
+    <associate|auto-152|<tuple|9.9|81>>
     <associate|auto-153|<tuple|9.9.1|81>>
     <associate|auto-154|<tuple|9.9.2|82>>
     <associate|auto-155|<tuple|10|83>>
@@ -6863,10 +6863,10 @@
     <associate|auto-92|<tuple|6.1.1|56>>
     <associate|auto-93|<tuple|7|57>>
     <associate|auto-94|<tuple|7.1|57>>
-    <associate|auto-95|<tuple|7.1.1|58>>
-    <associate|auto-96|<tuple|7.1.2|60>>
+    <associate|auto-95|<tuple|7.1.1|59>>
+    <associate|auto-96|<tuple|7.1.2|61>>
     <associate|auto-97|<tuple|7.1.2.1|61>>
-    <associate|auto-98|<tuple|7.1.2.2|61>>
+    <associate|auto-98|<tuple|7.1.2.2|62>>
     <associate|auto-99|<tuple|7.2|62>>
     <associate|bib-Appel:2015|<tuple|1|87>>
     <associate|bib-Carette:2009|<tuple|3|87>>
@@ -6906,7 +6906,7 @@
     <associate|ss:BTMerkleRoots|<tuple|4.4.1.2|48>>
     <associate|ss:BitcoinTransactions|<tuple|4.4.1|45>>
     <associate|ss:DAGs|<tuple|7.1|57>>
-    <associate|ss:DenotationalSemanticsOfFullSimplicity|<tuple|9.5|77>>
+    <associate|ss:DenotationalSemanticsOfFullSimplicity|<tuple|9.5|78>>
     <associate|ss:Deserialization|<tuple|6.2|?>>
     <associate|ss:MonadZero|<tuple|2.3.4|16>>
     <associate|ss:RepresentingValuesAsCellArrays|<tuple|3.5.1|31>>
@@ -6916,12 +6916,12 @@
     <associate|ss:coqArith|<tuple|8.3.2|67>>
     <associate|ss:coqInitial|<tuple|8.2.1|65>>
     <associate|ss:haskellLoop|<tuple|9.6.7|79>>
-    <associate|ss:inflate|<tuple|7.1.2.2|61>>
+    <associate|ss:inflate|<tuple|7.1.2.2|62>>
     <associate|ss:monadicSemantics|<tuple|4.1|41>>
     <associate|ss:optionMonad|<tuple|2.3.4.1|17>>
     <associate|ss:pruning|<tuple|4.3.2.1|44>>
     <associate|ss:salted|<tuple|4.3.2.2|44>>
-    <associate|ss:typeInference|<tuple|7.1.1|58>>
+    <associate|ss:typeInference|<tuple|7.1.1|59>>
     <associate|ss:unboundedLoop|<tuple|6.1|54>>
     <associate|thm:CSCT|<tuple|3.3|30>>
     <associate|v:checkSigHashAll|<tuple|8.6.6|?>>
