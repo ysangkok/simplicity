@@ -167,6 +167,29 @@ library
                        bytestring >=0.10 && <0.11,
                        containers >=0.5.10 && <0.7
 
+Executable janus
+  default-language:    Haskell2010
+  build-depends: Simplicity,
+                 base,
+                 mtl,
+                 base16-bytestring,
+                 bytestring,
+                 cereal,
+                 entropy,
+                 hashable,
+                 QuickCheck,
+                 string-conversions,
+                 lens-family,
+                 tasty,
+                 tasty-hunit,
+                 containers
+  extra-libraries: secp256k1
+  main-is: Main.hs
+  hs-source-dirs: mysecp256k1/src
+                  .
+  other-modules: CheckSigNoInput Crypto.Secp256k1 Crypto.Secp256k1.Internal
+  --ghc-options: -g -threaded -with-rtsopts -xc
+
 Test-Suite testsuite
   Type:                exitcode-stdio-1.0
   main-is:             Tests.hs

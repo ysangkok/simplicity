@@ -75,7 +75,7 @@ mkLib Sha256.Lib{..} libSecp256k1 = lib
   sigAll :: (Product CommitmentRoot term) () (Block, Block)
   sigAll = blk1 &&& blk2
    where
-    blk1 = primitive InputsHash &&& primitive OutputsHash
+    blk1 = zero word256 &&& primitive OutputsHash
     blk2 = ((primitive CurrentValue &&& (primitive CurrentIndex &&& primitive LockTime)) &&& ((primitive Version &&& scribe (toWord32 0x80000000)) &&& zero word64)) &&& scribe (toWord256 (512+2*256+64+3*32))
   lib@Lib{..} =
    Lib

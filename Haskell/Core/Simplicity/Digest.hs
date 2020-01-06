@@ -6,6 +6,7 @@ module Simplicity.Digest
   , integerHash256, hash0
   , IV, bsIv, ivHash, bslHash, bsHash, bitStringHash
   , Block512, compress, compressHalf
+  , hash256
   ) where
 
 import Control.Monad (replicateM)

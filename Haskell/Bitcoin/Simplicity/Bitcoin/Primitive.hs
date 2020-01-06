@@ -5,6 +5,7 @@ module Simplicity.Bitcoin.Primitive
   , getPrimBit, getPrimByte, putPrimBit, putPrimByte
   , PrimEnv, primEnv
   , primSem
+  , envTx
   ) where
 
 import Data.Array (Array, (!), bounds, elems, inRange)
