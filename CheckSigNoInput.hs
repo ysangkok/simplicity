@@ -4,7 +4,7 @@ module CheckSigNoInput (checkSig, mkSig, privateToPublic, simpleHashToByteString
 
 import Prelude hiding (drop, replicate, concat, length, zipWith)
 import Data.Bits (bit, (.|.))
-import Data.ByteString (replicate, concat, ByteString, length, pack, zipWith, unpack)
+import Data.ByteString (concat, ByteString, length, unpack)
 import Data.Either (fromRight)
 import Data.Maybe (fromJust)
 import Data.Serialize (encode, decode)
@@ -13,9 +13,9 @@ import Control.Monad.Except (ExceptT)
 import Control.Arrow (Kleisli(Kleisli), runKleisli)
 import Control.Monad (unless)
 import Control.Monad.Reader (ReaderT)
-import GHC.Word (Word64, Word8, Word32)
+import GHC.Word (Word64, Word8)
 
-import Crypto.Secp256k1 (signMsgSchnorr, msg, secKey, exportSchnorrSig, derivePubKey, SecKey, xOnlyPubKeyFromPubKey, exportXOnlyPubKey, importXOnlyPubKey, importSchnorrSig, verifyMsgSchnorr)
+import Crypto.Secp256k1 (signMsgSchnorr, msg, exportSchnorrSig, SecKey, createXOnlyPubKey, exportXOnlyPubKey, importXOnlyPubKey, importSchnorrSig, verifyMsgSchnorr)
 
 import Simplicity.Bitcoin.Primitive (PrimEnv)
 import Simplicity.Bitcoin.Programs.CheckSigHashAll (pkwCheckSigHashAll, Hash, lib, sigHashAll) -- actually noInput
@@ -25,7 +25,7 @@ import Simplicity.Term.Core ((>>>))
 sigHashNoInput = sigHashAll
 
 privateToPublic :: SecKey -> XOnlyPubKey
-privateToPublic = fromRight (error "could not decode pubkey") . decode . exportXOnlyPubKey . (flip xOnlyPubKeyFromPubKey 1) . derivePubKey
+privateToPublic = fromRight (error "could not decode pubkey") . decode . exportXOnlyPubKey . createXOnlyPubKey
 
 type MyMonad = ExceptT String (ReaderT PrimEnv (Either String))
 
@@ -54,7 +54,7 @@ checkSig pubK sig =
     >>> pkwCheckSigHashAll lib pubK sig -- actually NoInput
 
 validateSigOrFail :: XOnlyPubKey -> Sig -> Kleisli MyMonad () ()
-validateSigOrFail pub sig = Kleisli $ \unit -> do
+validateSigOrFail pub sig = Kleisli $ \_unit -> do
   hsh <- runKleisli (sigHashNoInput lib) ()
   let b32pub = encode pub
   let b64sig = encode sig

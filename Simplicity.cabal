@@ -182,13 +182,14 @@ Executable janus
                  lens-family,
                  tasty,
                  tasty-hunit,
-                 containers
+                 containers,
+                 haskoin-core
   extra-libraries: secp256k1
   main-is: Main.hs
   hs-source-dirs: mysecp256k1/src
                   .
   other-modules: CheckSigNoInput Crypto.Secp256k1 Crypto.Secp256k1.Internal
-  --ghc-options: -g -threaded -with-rtsopts -xc
+  ghc-options: -Wall -fprint-potential-instances
 
 Test-Suite testsuite
   Type:                exitcode-stdio-1.0
